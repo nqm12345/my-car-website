@@ -1,0 +1,203 @@
+body.modal-open {
+  overflow: hidden !important;
+  height: auto;
+}
+
+/* Modal nền */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(20px);
+  background-color: rgba(255, 255, 255, 0.05);
+  z-index: 9999;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+/* Nội dung chính */
+.modal__content {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 30px;
+  border-radius: 20px;
+  max-width: 1000px;
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+  backdrop-filter: blur(25px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #555;
+  animation: slideUp 0.5s ease-in-out;
+}
+
+/* Nút đóng */
+.modal__close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 28px;
+  cursor: pointer;
+  color: #e42525;
+}
+
+/* Bố cục ảnh + thông tin */
+.modal__body {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Ảnh */
+.modal__body img {
+  width: 65%;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: none;
+}
+
+/* Thông tin */
+.modal__info {
+  width: 30%;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #555;
+}
+
+.modal__info i {
+  margin-right: 6px;
+  vertical-align: middle;
+  font-size: 18px;
+}
+
+/* Màu riêng từng icon */
+.icon--price {
+  color: #e6b800; /* vàng tiền */
+}
+
+.icon--speed {
+  color: #ff3c3c; /* đỏ */
+}
+
+.icon--acceleration {
+  color: #f57c00; /* cam */
+}
+
+.icon--engine {
+  color: #00897b; /* xanh lục đậm */
+}
+
+.icon--horsepower {
+  color: #673ab7; /* tím */
+}
+
+.icon--year {
+  color: #0277bd; /* xanh dương */
+}
+
+.icon--tech {
+  color: #43a047; /* xanh lá cây */
+}
+
+/* Tiêu đề */
+.modal__info h2 {
+  margin-top: 0;
+  color: #555;
+  font-size: 26px;
+}
+
+/* Nút Mua ngay */
+.modal__buy {
+  margin-top: 20px;
+  padding: 12px 30px;
+  background: linear-gradient(135deg, #c50b19, #ff3c3c);
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 50px;
+  font-size: 17px;
+  cursor: pointer;
+  transition: 0.4s ease;
+  box-shadow: 0 4px 15px rgba(197, 11, 25, 0.5);
+}
+
+.modal__buy:hover {
+  background: linear-gradient(135deg, #a20815, #e42525);
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(197, 11, 25, 0.7);
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* ===== Responsive ===== */
+@media screen and (max-width: 1024px) {
+  .modal__body {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .modal__body img {
+    width: 60%;
+  }
+
+  .modal__close {
+    top: 50px;
+    right: 20px;
+  }
+
+  .modal__info {
+    width: 100%;
+    margin-top: 20px;
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .modal__content {
+    padding: 20px;
+  }
+
+  .modal__info h2 {
+    font-size: 22px;
+  }
+
+  .modal__buy {
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+
+  .modal__close {
+    top: 5px;
+    right: 10px;
+    font-size: 24px;
+  }
+}

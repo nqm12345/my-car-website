@@ -1,0 +1,91 @@
+.cars__heading {
+  text-align: center;
+  margin: 50px 0px 50px 0px;
+}
+
+.cars__heading span {
+  font-weight: 500;
+  color: #d90429;
+}
+
+.cars__heading p {
+  font-size: 0.938rem;
+  font-weight: 300;
+}
+
+/* ========== CONTAINER ========== */
+.cars {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* ========== ITEM (BOX) ========== */
+.cars__item {
+  flex: 1 1 280px;
+  max-width: 100%;
+  position: relative;
+  height: 220px;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.cars__item:hover {
+  transform: translateY(-5px);
+}
+
+/* ========== IMAGE ========== */
+.cars__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.cars__image:hover {
+  transform: scale(1.1);
+}
+
+/* ========== TITLE ========== */
+.cars__title {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  font-weight: 400;
+  font-size: 1rem;
+  background: #fff;
+  padding: 8px 12px;
+  border-radius: 0.5rem;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.cars__item:hover .cars__title {
+  background: #d90429;
+  color: #fff;
+}
+
+/* ========== RESPONSIVE ========== */
+
+/* Tablet: 2 cột */
+@media screen and (max-width: 1024px) {
+  .cars__item {
+    flex: 1 1 calc(50% - 2rem);
+    height: 200px;
+  }
+}
+
+/* Mobile: 1 cột */
+@media screen and (max-width: 600px) {
+  .cars__item {
+    flex: 1 1 100%;
+    height: 180px;
+  }
+
+  .cars__title {
+    font-size: 0.9rem;
+    padding: 6px 10px;
+  }
+}

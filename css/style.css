@@ -1,0 +1,416 @@
+.container {
+  max-width: 1060px;
+  margin: auto;
+  width: 100%;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.header__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: black;
+  padding: 17px 20px;
+}
+
+.header__logo {
+  font-size: 1.7rem;
+  font-weight: 600;
+  color: gold;
+}
+
+.header__logo span {
+  color: #ff0000;
+}
+
+.header__navbar {
+  display: flex;
+  align-items: center;
+  column-gap: 1.5rem;
+}
+
+.header__nav-link {
+  font-size: 0.88rem;
+  color: #fff;
+  transition: 0.4s all;
+}
+
+.header__nav-link:hover {
+  color: #ff0000;
+}
+
+.header__icons {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.header__icon .bx {
+  color: #fff;
+  font-size: 20px;
+}
+
+.header__user-icon {
+  padding: 7px;
+  background: orangered;
+  border-radius: 50%;
+}
+
+.header__user-icon:hover {
+  background: orange;
+}
+
+.header__menu-icon {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 5px;
+  cursor: pointer;
+
+  position: relative;
+  z-index: 1001;
+  transition: 0.3s;
+}
+
+.header__menu-line {
+  background: #fff;
+  height: 2px;
+  width: 23px;
+  transition: 0.3s;
+}
+
+/* Biến thể khi menu icon đang mở */
+.header__menu-icon.move .header__menu-line--1 {
+  transform: rotate(-45deg) translate(-5px, 5px);
+}
+
+.header__menu-icon.move .header__menu-line--2 {
+  opacity: 0;
+}
+
+.header__menu-icon.move .header__menu-line--3 {
+  transform: rotate(45deg) translate(-5px, -5px);
+}
+
+/* Tablet & Mobile (<=768px): sidebar từ PHẢI */
+@media (max-width: 768px) {
+  .header__menu-icon {
+    display: flex;
+  }
+
+  .header__navbar {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 250px;
+    height: 100vh;
+    background: black;
+    flex-direction: column;
+    padding: 4rem 1.5rem;
+    row-gap: 1.5rem;
+    transition: right 0.4s ease;
+    z-index: 999;
+  }
+
+  .header__navbar.active {
+    right: 0;
+  }
+
+  .header__nav-link {
+    font-size: 1rem;
+    color: white;
+  }
+
+  .header__nav-link:hover {
+    color: #ff0000;
+  }
+}
+
+/* Mobile (<=480px): sidebar từ TRÊN xuống */
+@media (max-width: 480px) {
+  .header__navbar {
+    top: -100%;
+    right: 0;
+    width: 100%;
+    height: auto;
+    max-height: 90vh;
+    transition: top 0.4s ease;
+  }
+
+  .header__navbar.active {
+    top: 70px;
+  }
+
+  .header__logo {
+    font-size: 1.2rem;
+  }
+
+  .header__icons .bx {
+    font-size: 18px;
+  }
+
+  .header__icons {
+    gap: 0.5rem;
+  }
+}
+
+/* Desktop >= 769px: navbar hiện bình thường */
+@media (min-width: 769px) {
+  .header__menu-icon {
+    display: none !important;
+  }
+
+  .header__navbar {
+    position: static;
+    flex-direction: row;
+    height: auto;
+    padding: 0;
+  }
+}
+
+.home {
+  background: black;
+  min-height: 670px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 8rem;
+  position: relative;
+  transition: background 0.4s ease;
+}
+.home__content {
+  z-index: 1;
+  width: 80%;
+  max-width: 1000px;
+  color: white;
+}
+.home__img-wrapper {
+  width: 600px;
+  height: 320px;
+  margin: 0 auto 2rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible; /* Quan trọng: không ẩn ảnh */
+}
+.home__img-wrapper img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: transform 0.6s ease, opacity 0.6s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.home__img-wrapper img.active {
+  opacity: 1;
+  transform: translateX(0);
+  z-index: 2;
+}
+.home__img-wrapper img.out {
+  transform: translateX(-100%);
+  opacity: 0;
+  z-index: 1;
+}
+
+.home__img {
+  filter: drop-shadow(0 0 10px #c50b19);
+}
+
+.home__car-label {
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 6rem;
+  font-weight: 600;
+  color: #ccc;
+  pointer-events: none;
+  white-space: nowrap;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  z-index: -1;
+}
+.home__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1.5rem;
+  position: relative;
+  color: #ccc;
+}
+.home__info-h3 {
+  font-size: 3rem;
+}
+
+.home__flex__description {
+  display: flex;
+}
+
+.home__info-box-small {
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-size: 0.8rem; */
+}
+.info-top {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.info__col--large {
+  flex: 0 0 55%;
+}
+.info__col--small {
+  flex: 0 0 15.5%;
+}
+.home__car-name {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  transition: color 0.4s ease;
+  color: #c50b19;
+}
+.home__specs {
+  list-style: none;
+  padding: 30px;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+.icon-box {
+  color: #ed4c50;
+  font-size: 3rem;
+}
+.home__numbers {
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 80;
+}
+.home__number,
+.home__dash {
+  font-size: 1.5rem;
+  color: #ffffffa1;
+  user-select: none;
+}
+.home__number {
+  cursor: pointer;
+  transition: color 0.3s;
+}
+.home__number.active {
+  color: #fff;
+  font-weight: bold;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+  .home__img-wrapper {
+    width: 500px;
+    height: 280px;
+  }
+  .home__car-label {
+    font-size: 5rem;
+  }
+  .home__specs {
+    padding: 15px;
+  }
+}
+
+/* Media Query cho màn hình nhỏ hơn 768px */
+@media (max-width: 768px) {
+  .home__img-wrapper {
+    width: 400px;
+    height: 240px;
+  }
+  .home__car-label {
+    font-size: 4rem;
+  }
+  .home__info {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .home__info-h3 {
+    right: 200px;
+  }
+  .home__info-p {
+    top: 40px;
+  }
+  .info__col--large,
+  .info__col--small {
+    flex: 0 0 100%;
+  }
+}
+
+@media (max-width: 666px) {
+  .home__car-label {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 620px) {
+  .home__car-label {
+    font-size: 3rem;
+  }
+
+  .home__specs {
+    padding: 5px;
+  }
+}
+
+@media (max-width: 500px) {
+  .home__img-wrapper {
+    width: 300px;
+    height: 200px;
+  }
+  .home__car-label {
+    font-size: 1.8rem;
+  }
+
+  .info__col--small {
+    flex: 0 0 60%;
+    justify-content: space-between;
+  }
+
+  .home__car-name {
+    font-size: 1.5rem;
+  }
+  .home__info-h3 {
+    font-size: 2rem;
+    right: 150px;
+  }
+  .home__info-p {
+    top: 30px;
+  }
+  .icon-box {
+    font-size: 2rem;
+  }
+  .home__number,
+  .home__dash {
+    font-size: 1.2rem;
+  }
+}

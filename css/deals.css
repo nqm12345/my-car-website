@@ -1,0 +1,176 @@
+:root {
+  --primary-color: #8a79f0;
+  --primary-color-dark: #2e2a40;
+  --text-dark: #221e36;
+  --text-light: #767268;
+  --extra-light: #f1f2ff;
+  --white: #ffffff;
+  --max-width: 1200px;
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  font-size: 1rem;
+  color: var(--white);
+  background-color: var(--primary-color);
+  border-radius: 0.5rem;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: var(--primary-color-dark);
+}
+
+.deals {
+  padding: 3rem 1rem;
+}
+
+.deals__container {
+  max-width: 1060px;
+  margin: auto;
+  padding: 60px 0px 60px 0px;
+}
+
+.section__header {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--text-dark);
+}
+
+.section__description {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 2.5rem;
+  color: var(--text-light);
+}
+
+.deals__tabs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.deals__tabs .btn {
+  font-weight: 600;
+  color: var(--primary-color-dark);
+  background-color: var(--white);
+}
+
+.deals__tabs .btn.active {
+  color: var(--white);
+  background-color: var(--primary-color);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.tab__content {
+  display: none;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  animation: fadeEffect 0.5s ease-in-out;
+}
+
+.tab__content.active {
+  display: grid;
+}
+
+@keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.deals__card {
+  padding: 1rem;
+  background-color: var(--white);
+  border-radius: 1rem;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
+  transform: translateY(20px);
+  animation: fadeUp 0.6s ease forwards;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.deals__card:hover {
+  transform: translateY(-8px); /* nâng box lên một chút */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* đổ bóng đậm hơn */
+  cursor: pointer;
+}
+
+.deals__card img {
+  width: 100%;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  object-fit: contain;
+  object-position: center;
+}
+
+.deals__rating {
+  color: goldenrod;
+  margin-bottom: 0.5rem;
+}
+
+.deals__rating span:last-child {
+  color: var(--text-light);
+}
+
+.deals__card h4 {
+  color: var(--text-dark);
+  margin: 0.5rem 0 1rem;
+}
+
+.deals__card__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  color: var(--text-light);
+}
+
+.deals__card__grid div {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.deals__card__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.deals__card__footer h3 {
+  color: var(--text-dark);
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.deals__card__footer a {
+  text-decoration: none;
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.deals__card__footer a:hover {
+  color: var(--primary-color-dark);
+}
+
+/* Responsive 2 cột */
+@media (min-width: 768px) {
+  .tab__content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Responsive 3 cột */
+@media (min-width: 1024px) {
+  .tab__content {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

@@ -1,0 +1,136 @@
+.footer {
+  background-color: black;
+  color: #fff;
+  padding: 40px 20px 20px;
+  font-size: 15px;
+}
+
+.footer__container {
+  max-width: 1060px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+/* === LOGO === */
+.footer__logo {
+  font-size: 24px;
+  color: gold;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.footer__logo span {
+  color: #ff0000;
+}
+
+/* === COLUMN === */
+.footer__column h4 {
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 12px;
+}
+
+.footer__description {
+  color: #ccc;
+  line-height: 1.5;
+}
+
+/* === LIST LINKS === */
+.footer__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer__item {
+  margin-bottom: 8px;
+}
+
+.footer__link {
+  color: #ccc;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer__link:hover {
+  text-decoration: underline;
+  color: #ff0000;
+}
+
+/* === CONTACT === */
+.footer__contact-list li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  color: #ccc;
+}
+
+/* === SOCIAL === */
+.footer__social {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.footer__social a {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eee;
+  color: #444;
+  border-radius: 50%;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.footer__social a:hover {
+  background: #ff0000;
+  color: #fff;
+}
+
+/* === MAP === */
+.footer__map iframe {
+  width: 100%;
+  height: 120px;
+  border: 0;
+  border-radius: 6px;
+  margin-top: 10px;
+}
+
+/* === BOTTOM === */
+.footer__bottom {
+  max-width: 1060px;
+  margin: 20px auto 0;
+  text-align: center;
+  border-top: 1px solid #444;
+  padding-top: 10px;
+  font-size: 14px;
+  color: #aaa;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .footer__container {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer__container {
+    grid-template-columns: 1fr;
+  }
+
+  .footer__column {
+    margin-bottom: 25px;
+  }
+
+  .footer__social {
+    justify-content: flex-start;
+  }
+}

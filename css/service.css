@@ -1,0 +1,154 @@
+/* ========== SECTION SUPPORT (Dịch vụ hỗ trợ) ========== */
+.support {
+  background: #fff;
+  padding: 100px 20px;
+}
+.support__container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.support__heading {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.support__heading-subtitle {
+  display: inline-block;
+  font-weight: bold;
+  color: #d90429; /* ✅ màu đỏ bạn yêu cầu */
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.support__heading-title {
+  font-size: 2.5rem;
+  color: #111;
+  margin-bottom: 15px;
+}
+.support__heading-description {
+  font-size: 1.1rem;
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* ========== GRID CARD ========== */
+.support__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+.support__card {
+  background: #fff;
+  padding: 30px 25px;
+  border-radius: 20px;
+  text-align: center;
+  transition: 0.4s ease;
+  position: relative;
+  box-shadow: 0 0 0 transparent;
+  z-index: 1;
+}
+.support__card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 0 30px rgba(255, 0, 123, 0.25), 0 0 40px rgba(0, 242, 255, 0.15);
+}
+
+/* Hiệu ứng phát sáng phía sau */
+.support__card::before {
+  content: "";
+  position: absolute;
+  top: -10%;
+  left: -10%;
+  width: 120%;
+  height: 120%;
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 0, 123, 0.2),
+    transparent 70%
+  );
+  filter: blur(40px);
+  opacity: 0;
+  transition: 0.3s ease;
+  z-index: -1;
+}
+.support__card:hover::before {
+  opacity: 1;
+}
+
+/* ICON */
+.support__icon {
+  font-size: 3rem;
+  color: #ff007f;
+  margin-bottom: 20px;
+  animation: flicker 2.5s infinite;
+}
+.support__card-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+.support__card-description {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+.support__link {
+  color: #111;
+  font-weight: 600;
+  text-decoration: none;
+  position: relative;
+  transition: 0.3s;
+}
+.support__link::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: #ff007f;
+  bottom: -3px;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: 0.3s;
+}
+.support__link:hover {
+  color: #ff007f;
+}
+.support__link:hover::after {
+  transform: scaleX(1);
+}
+
+/* ========== ANIMATIONS ========== */
+@keyframes flicker {
+  0%,
+  19%,
+  21%,
+  23%,
+  25%,
+  54%,
+  56%,
+  100% {
+    opacity: 1;
+  }
+  20%,
+  22%,
+  24%,
+  55% {
+    opacity: 0.5;
+  }
+}
+@keyframes pulseColor {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+  .support__heading-title {
+    font-size: 2rem;
+  }
+}

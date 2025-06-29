@@ -1,0 +1,1296 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/cars.css" />
+    <link rel="stylesheet" href="css/deals.css" />
+    <link rel="stylesheet" href="css/parts.css" />
+    <link rel="stylesheet" href="css/slider.css" />
+    <link rel="stylesheet" href="css/service.css" />
+    <link rel="stylesheet" href="css/about.css" />
+    <link rel="stylesheet" href="css/blogs.css" />
+    <link rel="stylesheet" href="css/faq.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/modal.css" />
+    <link rel="stylesheet" href="css/login.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header" id="header">
+      <div class="header__nav container">
+        <!-- Logo -->
+        <a href="#" class="header__logo">Rento<span>.</span></a>
+
+        <!-- Navbar -->
+        <nav class="header__navbar" id="navbar">
+          <a href="#home" class="header__nav-link">Trang chủ</a>
+          <a href="#cars" class="header__nav-link">Danh mục</a>
+          <a href="#deals" class="header__nav-link">Ô tô</a>
+          <a href="#parts" class="header__nav-link">Phụ tùng</a>
+          <a href="#vehicles" class="header__nav-link">Nổi bật</a>
+          <a href="#services" class="header__nav-link">Dịch vụ</a>
+          <a href="#blog" class="header__nav-link">Tin tức</a>
+        </nav>
+
+        <!-- Nav Icons -->
+        <div class="header__icons">
+          <a href="#" class="header__icon"><i class="bx bx-search"></i></a>
+          <a href="#" class="header__icon"
+            ><i class="bx bx-user header__user-icon" id="user-icon"></i
+          ></a>
+
+          <!-- Menu Icon -->
+          <div class="header__menu-icon" id="menu-icon">
+            <div class="header__menu-line header__menu-line--1"></div>
+            <div class="header__menu-line header__menu-line--2"></div>
+            <div class="header__menu-line header__menu-line--3"></div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- LOGIN FORM -->
+    <!-- AUTH MODAL -->
+    <div class="auth-modal" id="authModal">
+      <div class="auth-modal__wrapper" id="authWrapper">
+        <span class="auth-modal__close" id="authClose">&times;</span>
+
+        <div class="auth-modal__left">
+          <h1 class="auth-modal__logo">Rento<span>.</span></h1>
+          <p class="auth-modal__description">
+            Khám phá thế giới siêu xe đẳng cấp. Tốc độ & phong cách đều tập
+            trung tại đây.
+          </p>
+          <img
+            src="images/home3.png"
+            alt="supercar"
+            class="auth-modal__image"
+          />
+        </div>
+
+        <div class="auth-modal__right">
+          <!-- Login Form -->
+          <div class="auth-form auth-form--login auth-form--active">
+            <h2 class="auth-form__title">Đăng Nhập</h2>
+            <form class="auth-form__form">
+              <div class="auth-form__input-box">
+                <input
+                  type="text"
+                  required
+                  placeholder=" "
+                  class="auth-form__input"
+                />
+                <label class="auth-form__label">Tên đăng nhập</label>
+              </div>
+              <div class="auth-form__input-box">
+                <input
+                  type="password"
+                  required
+                  placeholder=" "
+                  class="auth-form__input"
+                />
+                <label class="auth-form__label">Mật khẩu</label>
+              </div>
+              <button type="submit" class="auth-form__btn">Đăng nhập</button>
+
+              <div class="auth-form__social-login">
+                <span class="auth-form__social-label"
+                  >Hoặc đăng nhập bằng:</span
+                >
+                <div class="auth-form__social-icons">
+                  <i class="bx bxl-google"></i>
+                  <i class="bx bxl-facebook-circle"></i>
+                  <i class="bx bxl-twitter"></i>
+                  <i class="bx bxl-github"></i>
+                </div>
+              </div>
+
+              <p class="auth-form__toggle">
+                Chưa có tài khoản?
+                <span id="toRegister" class="auth-form__link">Đăng ký</span>
+              </p>
+            </form>
+          </div>
+
+          <!-- Register Form -->
+          <div class="auth-form auth-form--register">
+            <h2 class="auth-form__title">Đăng Ký</h2>
+            <form class="auth-form__form">
+              <div class="auth-form__input-box">
+                <input
+                  type="text"
+                  required
+                  placeholder=" "
+                  class="auth-form__input"
+                />
+                <label class="auth-form__label">Họ và tên</label>
+              </div>
+              <div class="auth-form__input-box">
+                <input
+                  type="email"
+                  required
+                  placeholder=" "
+                  class="auth-form__input"
+                />
+                <label class="auth-form__label">Email</label>
+              </div>
+              <div class="auth-form__input-box">
+                <input
+                  type="text"
+                  required
+                  placeholder=" "
+                  class="auth-form__input"
+                />
+                <label class="auth-form__label">Tên đăng nhập</label>
+              </div>
+              <div class="auth-form__input-box">
+                <input
+                  type="password"
+                  required
+                  placeholder=" "
+                  class="auth-form__input"
+                />
+                <label class="auth-form__label">Mật khẩu</label>
+              </div>
+              <button type="submit" class="auth-form__btn">Đăng ký</button>
+
+              <p class="auth-form__toggle">
+                Đã có tài khoản?
+                <span id="toLogin" class="auth-form__link">Đăng nhập</span>
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Home -->
+
+    <section class="home" id="home">
+      <div class="home__content container">
+        <div class="home__img-wrapper">
+          <img src="images/home1.png" class="home__img active" alt="Ảnh xe" />
+          <div class="home__car-label">Ferrari sf90</div>
+        </div>
+        <div class="home__info">
+          <div class="home__car-header info__col--large">
+            <h2 class="home__car-name">Ferrari sf90</h2>
+            <p class="home__info-description">
+              Ferrari là siêu xe đậm chất thể thao với thiết kế góc cạnh và động
+              cơ mạnh mẽ.
+            </p>
+          </div>
+          <div class="home__flex__description">
+            <div class="home__specs info__col--small">
+              <div class="info-top">
+                <ion-icon
+                  name="speedometer-outline"
+                  class="icon-box"
+                ></ion-icon>
+                <h3 class="home__info-h3">3.7</h3>
+              </div>
+              <div class="home__info-p">
+                <span>Sec.</span>
+                <span>0-100 km/h</span>
+              </div>
+            </div>
+            <div class="home__specs info__col--small home__specs-list">
+              <div class="home__info-box-small">
+                <div class="info-top">
+                  <ion-icon
+                    name="trending-up-outline"
+                    class="icon-box"
+                  ></ion-icon>
+                  <h3>325</h3>
+                </div>
+                <span>km/h</span>
+                <span>Top Speed</span>
+              </div>
+              <div class="home__info-box-small">
+                <div class="info-top">
+                  <ion-icon
+                    name="car-sport-outline"
+                    class="icon-box icon-box--small"
+                  ></ion-icon>
+                  <h3>8.000</h3>
+                </div>
+                <span>r.p.m</span>
+                <span>Power</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="home__numbers">
+        <span class="home__number active" onclick="selectSlide(0)">1</span>
+        <span class="home__dash">|</span>
+        <span class="home__number" onclick="selectSlide(1)">2</span>
+        <span class="home__dash">|</span>
+        <span class="home__number" onclick="selectSlide(2)">3</span>
+      </div>
+    </section>
+
+    <!-- Cars section -->
+
+    <section class="cars" id="cars" data-aos-duration="3000">
+      <div class="cars__heading">
+        <span>Tất cả các xe ô tô</span>
+        <h2>Chúng tôi có tất cả các loại ô tô</h2>
+        <p>
+          Dù bạn yêu thích tốc độ của siêu xe hay cần một chiếc xe gia đình rộng
+          rãi, chúng tôi đều có những lựa chọn phù hợp dành cho bạn.
+        </p>
+      </div>
+    </section>
+
+    <!-- Cars container -->
+
+    <section class="cars container" data-aos="fade-up" data-aos-duration="3000">
+      <div class="cars__item">
+        <img src="images/car1.jpg" alt="Porche Car" class="cars__image" />
+        <h2 class="cars__title">Porche Car</h2>
+      </div>
+
+      <div class="cars__item">
+        <img src="images/car2.jpg" alt="Bugatti Car" class="cars__image" />
+        <h2 class="cars__title">Bugatti Car</h2>
+      </div>
+
+      <div class="cars__item">
+        <img src="images/car3.jpg" alt="Lamborghini Car" class="cars__image" />
+        <h2 class="cars__title">Lamborghini Car</h2>
+      </div>
+
+      <div class="cars__item">
+        <img src="images/car4.jpg" alt="BMW Car" class="cars__image" />
+        <h2 class="cars__title">BMW Car</h2>
+      </div>
+
+      <div class="cars__item">
+        <img src="images/car5.jpg" alt="Mercedes Car" class="cars__image" />
+        <h2 class="cars__title">Mercedes Car</h2>
+      </div>
+
+      <div class="cars__item">
+        <img src="images/car6.jpg" alt="Ferrari Car" class="cars__image" />
+        <h2 class="cars__title">Ferrari Car</h2>
+      </div>
+    </section>
+
+    <!-- Deals -->
+
+    <section
+      class="deals"
+      id="deals"
+      data-aos="fade-up"
+      data-aos-duration="3000"
+    >
+      <div class="section__container deals__container">
+        <h2 class="section__header">Khám Phá Thế Giới Siêu Xe Đỉnh Cao</h2>
+        <p class="section__description">
+          Ferrari, Bugatti, Porsche, BMW và Mercedes – những biểu tượng tốc độ,
+          đẳng cấp và công nghệ hiện đại. Chúng tôi mang đến cho bạn những mẫu
+          xe sang trọng bậc nhất, thiết kế tinh tế cùng hiệu suất vượt trội, sẵn
+          sàng chinh phục mọi cung đường.
+        </p>
+
+        <div class="deals__tabs">
+          <button class="btn active" data-id="Ferrari">Ferrari</button>
+          <button class="btn" data-id="Bugatti">Bugatti</button>
+          <button class="btn" data-id="Porsche">Porsche</button>
+          <button class="btn" data-id="BMW">BMW</button>
+          <button class="btn" data-id="Mercedes">Mercedes</button>
+        </div>
+
+        <!-- FERRARI -->
+        <div id="Ferrari" class="tab__content active">
+          <div class="deals__card">
+            <img src="images/home1.png" alt="" />
+            <div class="deals__rating">
+              <span><i class="bx bxs-star"></i></span>
+              <span><i class="bx bxs-star"></i></span>
+              <span><i class="bx bxs-star"></i></span>
+              <span><i class="bx bxs-star"></i></span>
+              <span><i class="bx bxs-star-half"></i></span>
+              <span>(2k)</span>
+            </div>
+            <h4>Ferrari SF90 Stradale</h4>
+            <div class="deals__card__grid">
+              <div><i class="bx bx-tachometer"></i>340 km/h</div>
+              <div><i class="bx bx-bolt-circle"></i>986 mã lực</div>
+              <div><i class="bx bx-timer"></i>0–100 km/h: 2.5s</div>
+              <div><i class="bx bx-car"></i>V8 Hybrid</div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$ 560.000</h3>
+              <a href="#">Xem chi tiết</a>
+            </div>
+          </div>
+          <div class="deals__card">
+            <img src="images/home2.png" alt="" />
+            <div class="deals__rating">
+              <span><i class="bx bxs-star"></i></span>
+              <span><i class="bx bxs-star"></i></span>
+              <span><i class="bx bxs-star"></i></span>
+              <span><i class="bx bxs-star"></i></span>
+              <span><i class="bx bxs-star-half"></i></span>
+              <span>(2k)</span>
+            </div>
+            <h4>Bugatti</h4>
+            <div class="deals__card__grid">
+              <div><i class="bx bx-tachometer"></i>340 km/h</div>
+              <div><i class="bx bx-bolt-circle"></i>998 mã lực</div>
+              <div><i class="bx bx-timer"></i>0–100 km/h: 2.5s</div>
+              <div><i class="bx bx-car"></i>V8 Hybrid</div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$ 560.000</h3>
+              <a href="#">Xem chi tiết</a>
+            </div>
+          </div>
+          <div class="deals__card">
+            <img src="images/home3.png" alt="" />
+            <div class="deals__rating">
+              <span><i class="bx bxs-star"></i></span>
+              <span><i class="bx bxs-star"></i></span>
+              <span><i class="bx bxs-star"></i></span>
+              <span><i class="bx bxs-star"></i></span>
+              <span><i class="bx bxs-star-half"></i></span>
+              <span>(2k)</span>
+            </div>
+            <h4>Porche</h4>
+            <div class="deals__card__grid">
+              <div><i class="bx bx-tachometer"></i>340 km/h</div>
+              <div><i class="bx bx-bolt-circle"></i>1000 mã lực</div>
+              <div><i class="bx bx-timer"></i>0–100 km/h: 2.5s</div>
+              <div><i class="bx bx-car"></i>V8 Hybrid</div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$ 560.000</h3>
+              <a href="#">Xem chi tiết</a>
+            </div>
+          </div>
+          <div class="deals__card">
+            <img src="images/bmw1.png" alt="" />
+            <div class="deals__rating">
+              <span><i class="bx bxs-star"></i></span>
+              <span><i class="bx bxs-star"></i></span>
+              <span><i class="bx bxs-star"></i></span>
+              <span><i class="bx bxs-star"></i></span>
+              <span><i class="bx bxs-star-half"></i></span>
+              <span>(2k)</span>
+            </div>
+            <h4>Ferrari SF90 Stradale</h4>
+            <div class="deals__card__grid">
+              <div><i class="bx bx-tachometer"></i>340 km/h</div>
+              <div><i class="bx bx-bolt-circle"></i>986 mã lực</div>
+              <div><i class="bx bx-timer"></i>0–100 km/h: 2.5s</div>
+              <div><i class="bx bx-car"></i>V8 Hybrid</div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$ 560.000</h3>
+              <a href="#">Xem chi tiết</a>
+            </div>
+          </div>
+          <div class="deals__card">
+            <img src="images/mcd1.png" alt="" />
+            <div class="deals__rating">
+              <span><i class="bx bxs-star"></i></span>
+              <span><i class="bx bxs-star"></i></span>
+              <span><i class="bx bxs-star"></i></span>
+              <span><i class="bx bxs-star"></i></span>
+              <span><i class="bx bxs-star-half"></i></span>
+              <span>(2k)</span>
+            </div>
+            <h4>Ferrari SF90 Stradale</h4>
+            <div class="deals__card__grid">
+              <div><i class="bx bx-tachometer"></i>340 km/h</div>
+              <div><i class="bx bx-bolt-circle"></i>986 mã lực</div>
+              <div><i class="bx bx-timer"></i>0–100 km/h: 2.5s</div>
+              <div><i class="bx bx-car"></i>V8 Hybrid</div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$ 560.000</h3>
+              <a href="#">Xem chi tiết</a>
+            </div>
+          </div>
+          <div class="deals__card">
+            <img src="images/home3.png" alt="" />
+            <div class="deals__rating">
+              <span><i class="bx bxs-star"></i></span>
+              <span><i class="bx bxs-star"></i></span>
+              <span><i class="bx bxs-star"></i></span>
+              <span><i class="bx bxs-star"></i></span>
+              <span><i class="bx bxs-star-half"></i></span>
+              <span>(2k)</span>
+            </div>
+            <h4>Ferrari SF90 Stradale</h4>
+            <div class="deals__card__grid">
+              <div><i class="bx bx-tachometer"></i>340 km/h</div>
+              <div><i class="bx bx-bolt-circle"></i>986 mã lực</div>
+              <div><i class="bx bx-timer"></i>0–100 km/h: 2.5s</div>
+              <div><i class="bx bx-car"></i>V8 Hybrid</div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$ 560.000</h3>
+              <a href="#">Xem chi tiết</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- BUGATTI -->
+        <div id="Bugatti" class="tab__content">
+          <div class="deals__card">
+            <img src="images/home2.png" alt="" />
+            <div class="deals__rating">
+              <span><i class="bx bxs-star"></i></span>
+              <span><i class="bx bxs-star"></i></span>
+              <span><i class="bx bxs-star"></i></span>
+              <span><i class="bx bxs-star"></i></span>
+              <span><i class="bx bxs-star-half"></i></span>
+              <span>(3.5k)</span>
+            </div>
+            <h4>Bugatti Chiron Super Sport</h4>
+            <div class="deals__card__grid">
+              <div><i class="bx bx-tachometer"></i>420 km/h</div>
+              <div><i class="bx bx-bolt-circle"></i>1600 mã lực</div>
+              <div><i class="bx bx-timer"></i>0–100 km/h: 2.4s</div>
+              <div><i class="bx bx-car"></i>W16 Quad-Turbo</div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$ 3.900.000</h3>
+              <a href="#">Xem chi tiết</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- PORSCHE -->
+        <div id="Porsche" class="tab__content">
+          <div class="deals__card">
+            <img src="images/home3.png" alt="" />
+            <div class="deals__rating">
+              <span><i class="bx bxs-star"></i></span>
+              <span><i class="bx bxs-star"></i></span>
+              <span><i class="bx bxs-star"></i></span>
+              <span><i class="bx bxs-star"></i></span>
+              <span><i class="bx bxs-star-half"></i></span>
+              <span>(1.2k)</span>
+            </div>
+            <h4>Porsche Taycan Turbo S</h4>
+            <div class="deals__card__grid">
+              <div><i class="bx bx-tachometer"></i>260 km/h</div>
+              <div><i class="bx bx-bolt-circle"></i>761 mã lực</div>
+              <div><i class="bx bx-timer"></i>0–100 km/h: 2.8s</div>
+              <div><i class="bx bx-car"></i>Electric AWD</div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$ 185.000</h3>
+              <a href="#">Xem chi tiết</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- BMW -->
+        <div id="BMW" class="tab__content">
+          <div class="deals__card">
+            <img src="images/bmw1.png" alt="" />
+            <div class="deals__rating">
+              <span><i class="bx bxs-star"></i></span>
+              <span><i class="bx bxs-star"></i></span>
+              <span><i class="bx bxs-star"></i></span>
+              <span><i class="bx bxs-star"></i></span>
+              <span><i class="bx bxs-star-half"></i></span>
+              <span>(980)</span>
+            </div>
+            <h4>BMW M8 Competition</h4>
+            <div class="deals__card__grid">
+              <div><i class="bx bx-tachometer"></i>305 km/h</div>
+              <div><i class="bx bx-bolt-circle"></i>625 mã lực</div>
+              <div><i class="bx bx-timer"></i>0–100 km/h: 3.2s</div>
+              <div><i class="bx bx-car"></i>V8 TwinPower Turbo</div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$ 130.000</h3>
+              <a href="#">Xem chi tiết</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- MERCEDES -->
+        <div id="Mercedes" class="tab__content">
+          <div class="deals__card">
+            <img src="images/mcd1.png" alt="" />
+            <div class="deals__rating">
+              <span><i class="bx bxs-star"></i></span>
+              <span><i class="bx bxs-star"></i></span>
+              <span><i class="bx bxs-star"></i></span>
+              <span><i class="bx bxs-star"></i></span>
+              <span><i class="bx bxs-star-half"></i></span>
+              <span>(1.7k)</span>
+            </div>
+            <h4>Mercedes-AMG GT Black Series</h4>
+            <div class="deals__card__grid">
+              <div><i class="bx bx-tachometer"></i>325 km/h</div>
+              <div><i class="bx bx-bolt-circle"></i>730 mã lực</div>
+              <div><i class="bx bx-timer"></i>0–100 km/h: 3.1s</div>
+              <div><i class="bx bx-car"></i>V8 Biturbo</div>
+            </div>
+            <hr />
+            <div class="deals__card__footer">
+              <h3>$ 325.000</h3>
+              <a href="#">Xem chi tiết</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="parts"
+      id="parts"
+      data-aos="fade-up"
+      data-aos-duration="3000"
+    >
+      <div class="parts__heading">
+        <span class="parts__heading-subtitle">Phụ tùng siêu xe</span>
+        <h2 class="parts__heading-title">
+          Chúng tôi cung cấp mọi loại phụ tùng cho siêu xe
+        </h2>
+        <p class="parts__heading-description">
+          Từ động cơ hiệu suất cao, hệ thống treo thể thao đến phụ kiện nội thất
+          sang trọng – chúng tôi mang đến giải pháp tối ưu cho mọi dòng siêu xe
+          như Ferrari, Lamborghini, Porsche và nhiều thương hiệu đẳng cấp khác.
+        </p>
+      </div>
+
+      <div class="parts__list">
+        <!-- Item 1 -->
+        <div class="parts__item">
+          <img
+            src="images/part1.png"
+            alt="Động cơ V12"
+            class="parts__item-image"
+          />
+          <div class="parts__item-rating">
+            <span><i class="bx bxs-star"></i></span>
+            <span><i class="bx bxs-star"></i></span>
+            <span><i class="bx bxs-star"></i></span>
+            <span><i class="bx bxs-star"></i></span>
+            <span><i class="bx bxs-star-half"></i></span>
+            <span>(4.7k)</span>
+          </div>
+          <h4 class="parts__item-title">Động cơ V12 hiệu suất cao</h4>
+          <hr class="parts__item-divider" />
+          <div class="parts__item-footer">
+            <h3 class="parts__item-price">$ 125.000</h3>
+            <a href="#" class="parts__item-button">Mua ngay</a>
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="parts__item">
+          <img
+            src="images/part2.png"
+            alt="Phanh carbon-ceramic"
+            class="parts__item-image"
+          />
+          <div class="parts__item-rating">
+            <span><i class="bx bxs-star"></i></span>
+            <span><i class="bx bxs-star"></i></span>
+            <span><i class="bx bxs-star"></i></span>
+            <span><i class="bx bxs-star"></i></span>
+            <span><i class="bx bxs-star"></i></span>
+            <span>(2.9k)</span>
+          </div>
+          <h4 class="parts__item-title">Hệ thống phanh carbon-ceramic</h4>
+          <hr class="parts__item-divider" />
+          <div class="parts__item-footer">
+            <h3 class="parts__item-price">$ 18.000</h3>
+            <a href="#" class="parts__item-button">Mua ngay</a>
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="parts__item">
+          <img
+            src="images/part3.png"
+            alt="Ống xả titan"
+            class="parts__item-image"
+          />
+          <div class="parts__item-rating">
+            <span><i class="bx bxs-star"></i></span>
+            <span><i class="bx bxs-star"></i></span>
+            <span><i class="bx bxs-star"></i></span>
+            <span><i class="bx bxs-star-half"></i></span>
+            <span><i class="bx bx-star"></i></span>
+            <span>(1.2k)</span>
+          </div>
+          <h4 class="parts__item-title">Ống xả Titan siêu nhẹ</h4>
+          <hr class="parts__item-divider" />
+          <div class="parts__item-footer">
+            <h3 class="parts__item-price">$ 9.500</h3>
+            <a href="#" class="parts__item-button">Mua ngay</a>
+          </div>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="parts__item">
+          <img
+            src="images/part4.png"
+            alt="Lốp xe hiệu suất cao"
+            class="parts__item-image"
+          />
+          <div class="parts__item-rating">
+            <span><i class="bx bxs-star"></i></span>
+            <span><i class="bx bxs-star"></i></span>
+            <span><i class="bx bxs-star"></i></span>
+            <span><i class="bx bxs-star"></i></span>
+            <span><i class="bx bxs-star-half"></i></span>
+            <span>(3.1k)</span>
+          </div>
+          <h4 class="parts__item-title">Lốp xe hiệu suất cao Pirelli</h4>
+          <hr class="parts__item-divider" />
+          <div class="parts__item-footer">
+            <h3 class="parts__item-price">$ 4.800</h3>
+            <a href="#" class="parts__item-button">Mua ngay</a>
+          </div>
+        </div>
+
+        <!-- Item 5 -->
+        <div class="parts__item">
+          <img
+            src="images/part5.png"
+            alt="Vô lăng thể thao"
+            class="parts__item-image"
+          />
+          <div class="parts__item-rating">
+            <span><i class="bx bxs-star"></i></span>
+            <span><i class="bx bxs-star"></i></span>
+            <span><i class="bx bxs-star"></i></span>
+            <span><i class="bx bx-star"></i></span>
+            <span><i class="bx bx-star"></i></span>
+            <span>(1.9k)</span>
+          </div>
+          <h4 class="parts__item-title">Vô lăng thể thao bọc carbon</h4>
+          <hr class="parts__item-divider" />
+          <div class="parts__item-footer">
+            <h3 class="parts__item-price">$ 2.300</h3>
+            <a href="#" class="parts__item-button">Mua ngay</a>
+          </div>
+        </div>
+
+        <!-- Item 6 -->
+        <div class="parts__item">
+          <img
+            src="images/part6.png"
+            alt="Đèn LED matrix"
+            class="parts__item-image"
+          />
+          <div class="parts__item-rating">
+            <span><i class="bx bxs-star"></i></span>
+            <span><i class="bx bxs-star"></i></span>
+            <span><i class="bx bxs-star-half"></i></span>
+            <span><i class="bx bx-star"></i></span>
+            <span><i class="bx bx-star"></i></span>
+            <span>(800)</span>
+          </div>
+          <h4 class="parts__item-title">Đèn LED Matrix siêu sáng</h4>
+          <hr class="parts__item-divider" />
+          <div class="parts__item-footer">
+            <h3 class="parts__item-price">$ 1.200</h3>
+            <a href="#" class="parts__item-button">Mua ngay</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Vehicles -->
+
+    <section
+      class="vehicles"
+      id="vehicles"
+      data-aos="fade-up"
+      data-aos-duration="3000"
+    >
+      <div class="vehicles__heading">
+        <span class="vehicles__heading-subtitle">Xe nổi bật</span>
+        <h2 class="vehicles__heading-title">
+          Khám phá những mẫu xe được ưa chuộng nhất
+        </h2>
+        <p class="vehicles__heading-description">
+          Những mẫu xe được nhiều khách hàng tin chọn nhất, từ các dòng sedan
+          sang trọng đến SUV mạnh mẽ và siêu xe đỉnh cao. Đừng bỏ lỡ cơ hội sở
+          hữu chiếc xe phù hợp với phong cách và nhu cầu của bạn.
+        </p>
+      </div>
+
+      <div class="swiper vehicles__slider">
+        <div class="swiper-wrapper">
+          <!-- Slide 1 -->
+          <div class="swiper-slide vehicles__item">
+            <img
+              src="images/home1.png"
+              alt="McLaren P1"
+              class="vehicles__item-image"
+            />
+            <div class="vehicles__item-content">
+              <h3 class="vehicles__item-title">McLaren P1</h3>
+              <div class="vehicles__item-price">Giá: $120.000</div>
+              <ul class="vehicles__item-specs">
+                <li><i class="bx bx-calendar"></i> 2022</li>
+                <li><i class="bx bx-gas-pump"></i> Xăng</li>
+                <li><i class="bx bx-user"></i> 2 chỗ</li>
+                <li><i class="bx bx-cog"></i> Tự động</li>
+              </ul>
+              <div class="vehicles__item-actions">
+                <a href="#" class="vehicles__item-button">Xem chi tiết</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="swiper-slide vehicles__item">
+            <img
+              src="images/home2.png"
+              alt="McLaren P1"
+              class="vehicles__item-image"
+            />
+            <div class="vehicles__item-content">
+              <h3 class="vehicles__item-title">McLaren P1</h3>
+              <div class="vehicles__item-price">Giá: $120.000</div>
+              <ul class="vehicles__item-specs">
+                <li><i class="bx bx-calendar"></i> 2022</li>
+                <li><i class="bx bx-gas-pump"></i> Xăng</li>
+                <li><i class="bx bx-user"></i> 2 chỗ</li>
+                <li><i class="bx bx-cog"></i> Tự động</li>
+              </ul>
+              <div class="vehicles__item-actions">
+                <a href="#" class="vehicles__item-button">Xem chi tiết</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="swiper-slide vehicles__item">
+            <img
+              src="images/home3.png"
+              alt="McLaren P1"
+              class="vehicles__item-image"
+            />
+            <div class="vehicles__item-content">
+              <h3 class="vehicles__item-title">McLaren P1</h3>
+              <div class="vehicles__item-price">Giá: $120.000</div>
+              <ul class="vehicles__item-specs">
+                <li><i class="bx bx-calendar"></i> 2022</li>
+                <li><i class="bx bx-gas-pump"></i> Xăng</li>
+                <li><i class="bx bx-user"></i> 2 chỗ</li>
+                <li><i class="bx bx-cog"></i> Tự động</li>
+              </ul>
+              <div class="vehicles__item-actions">
+                <a href="#" class="vehicles__item-button">Xem chi tiết</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 4 -->
+          <div class="swiper-slide vehicles__item">
+            <img
+              src="images/bmw1.png"
+              alt="BMW M8"
+              class="vehicles__item-image"
+            />
+            <div class="vehicles__item-content">
+              <h3 class="vehicles__item-title">BMW M8</h3>
+              <div class="vehicles__item-price">Giá: $120.000</div>
+              <ul class="vehicles__item-specs">
+                <li><i class="bx bx-calendar"></i> 2022</li>
+                <li><i class="bx bx-gas-pump"></i> Xăng</li>
+                <li><i class="bx bx-user"></i> 2 chỗ</li>
+                <li><i class="bx bx-cog"></i> Tự động</li>
+              </ul>
+              <div class="vehicles__item-actions">
+                <a href="#" class="vehicles__item-button">Xem chi tiết</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 5 -->
+          <div class="swiper-slide vehicles__item">
+            <img
+              src="images/mcd1.png"
+              alt="McLaren Speedtail"
+              class="vehicles__item-image"
+            />
+            <div class="vehicles__item-content">
+              <h3 class="vehicles__item-title">McLaren Speedtail</h3>
+              <div class="vehicles__item-price">Giá: $120.000</div>
+              <ul class="vehicles__item-specs">
+                <li><i class="bx bx-calendar"></i> 2022</li>
+                <li><i class="bx bx-gas-pump"></i> Xăng</li>
+                <li><i class="bx bx-user"></i> 2 chỗ</li>
+                <li><i class="bx bx-cog"></i> Tự động</li>
+              </ul>
+              <div class="vehicles__item-actions">
+                <a href="#" class="vehicles__item-button">Xem chi tiết</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Swiper pagination -->
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+
+    <!-- Services -->
+
+    <section
+      class="support"
+      id="services"
+      data-aos="fade-up"
+      data-aos-duration="3000"
+    >
+      <div class="support__container">
+        <div class="support__heading">
+          <span class="support__heading-subtitle">Dịch vụ hỗ trợ</span>
+          <h2 class="support__heading-title">
+            Chúng tôi luôn đồng hành cùng bạn
+          </h2>
+          <p class="support__heading-description">
+            Khi mua xe tại hệ thống của chúng tôi, bạn không chỉ sở hữu một
+            chiếc xe hoàn hảo mà còn nhận được sự hỗ trợ toàn diện trong suốt
+            hành trình.
+          </p>
+        </div>
+
+        <div class="support__grid">
+          <div class="support__card">
+            <i class="support__icon bx bx-headphone"></i>
+            <h3 class="support__card-title">Hỗ trợ 24/7</h3>
+            <p class="support__card-description">
+              Luôn sẵn sàng tư vấn, giải đáp thắc mắc của bạn mọi lúc, mọi nơi.
+            </p>
+            <a href="/dich-vu/ho-tro-247" class="support__link">Xem chi tiết</a>
+          </div>
+
+          <div class="support__card">
+            <i class="support__icon bx bx-car"></i>
+            <h3 class="support__card-title">Lái thử miễn phí</h3>
+            <p class="support__card-description">
+              Đặt lịch lái thử tận nơi hoặc tại showroom để cảm nhận trực tiếp.
+            </p>
+            <a href="/dich-vu/lai-thu-mien-phi" class="support__link"
+              >Xem chi tiết</a
+            >
+          </div>
+
+          <div class="support__card">
+            <i class="support__icon bx bx-shield-plus"></i>
+            <h3 class="support__card-title">Bảo hành chính hãng</h3>
+            <p class="support__card-description">
+              Cam kết bảo hành đầy đủ theo tiêu chuẩn của nhà sản xuất.
+            </p>
+            <a href="/dich-vu/bao-hanh" class="support__link">Xem chi tiết</a>
+          </div>
+
+          <div class="support__card">
+            <i class="support__icon bx bx-credit-card"></i>
+            <h3 class="support__card-title">Hỗ trợ tài chính</h3>
+            <p class="support__card-description">
+              Trả góp linh hoạt, thủ tục nhanh gọn, lãi suất ưu đãi.
+            </p>
+            <a href="/dich-vu/ho-tro-tai-chinh" class="support__link"
+              >Xem chi tiết</a
+            >
+          </div>
+
+          <div class="support__card">
+            <i class="support__icon bx bx-wrench"></i>
+            <h3 class="support__card-title">Bảo dưỡng định kỳ</h3>
+            <p class="support__card-description">
+              Nhắc lịch và hỗ trợ bảo dưỡng để xe bạn luôn vận hành tốt.
+            </p>
+            <a href="/dich-vu/bao-duong" class="support__link">Xem chi tiết</a>
+          </div>
+
+          <div class="support__card">
+            <i class="support__icon bx bx-home-alt"></i>
+            <h3 class="support__card-title">Giao xe tận nơi</h3>
+            <p class="support__card-description">
+              Nhận xe tại nhà hoặc địa điểm theo yêu cầu, tiết kiệm thời gian
+              cho bạn.
+            </p>
+            <a href="/dich-vu/giao-xe-tan-noi" class="support__link"
+              >Xem chi tiết</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+
+    <section class="about" id="about">
+      <div class="about__container">
+        <!-- ẢNH SIÊU XE -->
+        <div
+          class="about__image"
+          data-aos="fade-right"
+          data-aos-duration="1500"
+        >
+          <img src="images/mcd1.png" alt="Super Car Rento" />
+          <span class="glow-circle"></span>
+        </div>
+
+        <!-- PHẦN GIỚI THIỆU -->
+        <div
+          class="about__content"
+          data-aos="fade-left"
+          data-aos-duration="1500"
+        >
+          <h2 class="about__title">Rento <span>.</span></h2>
+          <p class="about__desc">
+            <strong>Rento.</strong> là điểm đến đỉnh cao dành cho những tín đồ
+            đam mê tốc độ và sự sang trọng. Chúng tôi chuyên cung cấp các dòng
+            xe thể thao và siêu xe hàng đầu thế giới.
+          </p>
+          <p class="about__desc">
+            Với sự kết hợp giữa công nghệ, tốc độ và thiết kế đẳng cấp, mỗi
+            chiếc xe tại Rento. là một tuyệt tác nghệ thuật và phong cách sống.
+          </p>
+          <a href="#cars" class="about__btn"
+            >Khám phá bộ sưu tập <i class="bx bx-right-arrow-alt"></i
+          ></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blogs -->
+
+    <section class="blog" id="blog" data-aos="fade-up" data-aos-duration="3000">
+      <div class="blog__container">
+        <div class="blog__header">
+          <span class="blog__header-icon">
+            <i class="bx bx-line-chart"></i> Tin tức / Blog
+          </span>
+          <h2 class="blog__title">Bắt kịp xu hướng siêu xe & thị trường</h2>
+          <p class="blog__description">
+            Thông tin chuyên sâu về xe thể thao, so sánh xe & cập nhật thị
+            trường ô tô hạng sang.
+          </p>
+        </div>
+
+        <div class="blog__grid">
+          <!-- Blog Card 1 -->
+          <article class="blog__card">
+            <img
+              src="images/blog1.webp"
+              alt="Chọn xe phù hợp"
+              class="blog__image"
+            />
+            <div class="blog__content">
+              <h3 class="blog__card-title">
+                Hướng dẫn chọn siêu xe phù hợp với bạn
+              </h3>
+              <p class="blog__card-description">
+                Làm thế nào để chọn đúng dòng xe thể thao phù hợp phong cách
+                sống và ngân sách?
+              </p>
+              <a href="article_details.html" class="blog__link">
+                Đọc thêm <i class="bx bx-right-arrow-alt"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- Blog Card 2 -->
+          <article class="blog__card">
+            <img src="images/blog2.jpg" alt="So sánh xe" class="blog__image" />
+            <div class="blog__content">
+              <h3 class="blog__card-title">
+                Ferrari vs Lamborghini: Cuộc chiến siêu xe
+              </h3>
+              <p class="blog__card-description">
+                So sánh hiệu năng, thiết kế và trải nghiệm lái giữa hai ông lớn
+                siêu xe Ý.
+              </p>
+              <a href="#" class="blog__link">
+                Đọc thêm <i class="bx bx-right-arrow-alt"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- Blog Card 3 -->
+          <article class="blog__card">
+            <img
+              src="images/blog3.jpg"
+              alt="Thị trường xe 2025"
+              class="blog__image"
+            />
+            <div class="blog__content">
+              <h3 class="blog__card-title">
+                Top 5 siêu xe đáng mua nhất năm 2025
+              </h3>
+              <p class="blog__card-description">
+                Danh sách siêu xe đỉnh cao, giá trị giữ vững và công nghệ đột
+                phá.
+              </p>
+              <a href="#" class="blog__link">
+                Đọc thêm <i class="bx bx-right-arrow-alt"></i>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Faq -->
+    <section
+      class="qa-reviews"
+      id="faq"
+      data-aos="fade-up"
+      data-aos-duration="3000"
+    >
+      <div class="qa-reviews__container">
+        <div class="qa-reviews__header">
+          <span class="qa-reviews__icon">
+            <i class="bx bx-help-circle"></i> Hỏi đáp nhanh / Đánh giá
+          </span>
+          <h2 class="qa-reviews__title">
+            Câu hỏi thường gặp & đánh giá từ khách hàng
+          </h2>
+        </div>
+
+        <div class="qa-reviews__wrapper">
+          <!-- FAQ -->
+          <div
+            class="qa-reviews__faq"
+            data-aos="fade-right"
+            data-aos-delay="200"
+          >
+            <h3 class="qa-reviews__subheading">
+              <i class="bx bx-question-mark"></i> Câu hỏi thường gặp
+            </h3>
+
+            <div class="qa-reviews__faq-item">
+              <button class="qa-reviews__faq-question">
+                <i class="bx bx-car"></i> Tôi có thể đặt mẫu xe chưa có sẵn
+                không?
+              </button>
+              <div class="qa-reviews__faq-answer">
+                Bạn có thể đặt trước và tùy chọn cá nhân hóa theo nhu cầu. Chúng
+                tôi hỗ trợ tất cả thương hiệu siêu xe.
+              </div>
+            </div>
+
+            <div class="qa-reviews__faq-item">
+              <button class="qa-reviews__faq-question">
+                <i class="bx bx-wrench"></i> Có bảo hành tận nơi không?
+              </button>
+              <div class="qa-reviews__faq-answer">
+                Chúng tôi hỗ trợ bảo hành tận nơi tại thành phố lớn và có dịch
+                vụ vận chuyển toàn quốc.
+              </div>
+            </div>
+          </div>
+
+          <!-- Customer Reviews -->
+          <div
+            class="qa-reviews__reviews"
+            data-aos="fade-left"
+            data-aos-delay="300"
+          >
+            <h3 class="qa-reviews__subheading">
+              <i class="bx bx-user"></i> Đánh giá khách hàng
+            </h3>
+
+            <div class="qa-reviews__review-card">
+              <img
+                src="images/profile1.png"
+                alt="Avatar"
+                class="qa-reviews__avatar"
+              />
+              <div class="qa-reviews__review-content">
+                <p>
+                  "Dịch vụ chuyên nghiệp, hỗ trợ tận tình khi mình đặt xe
+                  Ferrari 296 GTB. Rất đáng tin cậy!"
+                </p>
+                <span>– Nguyễn Hữu Tín, Doanh nhân</span>
+              </div>
+            </div>
+
+            <div class="qa-reviews__review-card">
+              <img
+                src="images/profile3.jpg"
+                alt="Avatar"
+                class="qa-reviews__avatar"
+              />
+              <div class="qa-reviews__review-content">
+                <p>
+                  "Mình được tư vấn kỹ càng trước khi chọn mua McLaren. Showroom
+                  có nhiều mẫu rất mới."
+                </p>
+                <span>– Trần Minh Huy, Nhà đầu tư</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+
+    <footer class="footer">
+      <div class="footer__container">
+        <!-- Cột 1: Logo & mô tả -->
+        <div class="footer__column footer__column--about">
+          <h2 class="footer__logo">Rento <span>.</span></h2>
+          <p class="footer__description">
+            Khám phá thế giới siêu xe – thể thao, sang trọng và đẳng cấp. Trải
+            nghiệm mua xe đỉnh cao chỉ có tại Rento.
+          </p>
+        </div>
+
+        <!-- Cột 2: Danh mục -->
+        <div class="footer__column footer__column--menu">
+          <h4 class="footer__heading">Danh mục</h4>
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a href="#" class="footer__link">Trang chủ</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__link">Giới thiệu</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__link">Siêu xe</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__link">Xe thể thao</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__link">Tin tức</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Cột 3: Liên hệ & Bản đồ -->
+        <div class="footer__column footer__column--contact">
+          <h4 class="footer__heading">Liên hệ</h4>
+          <ul class="footer__contact-list">
+            <li><i class="bx bx-phone"></i> 0989 123 456</li>
+            <li><i class="bx bx-envelope"></i> contact@rento.vn</li>
+            <li><i class="bx bx-map"></i> 68 Trần Duy Hưng, Hà Nội</li>
+          </ul>
+          <div class="footer__social">
+            <a href="#"><i class="bx bxl-facebook"></i></a>
+            <a href="#"><i class="bx bxl-instagram-alt"></i></a>
+            <a href="#"><i class="bx bxl-youtube"></i></a>
+          </div>
+          <div class="footer__map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1012.5561194350579!2d105.65671306985321!3d21.163367606492148!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1svi!2s!4v1751037279160!5m2!1svi!2s"
+              width="100%"
+              height="200"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p>&copy; 2025 Rento. Tất cả bản quyền được bảo lưu.</p>
+      </div>
+    </footer>
+
+    <div class="modal" id="carDetailModal">
+      <div class="modal__content">
+        <span class="modal__close">&times;</span>
+        <div class="modal__body">
+          <img id="modalImg" src="" alt="Ảnh xe" />
+          <div class="modal__info">
+            <h2 id="modalName"></h2>
+
+            <p>
+              <i class="bx bx-dollar-circle icon--price"></i>
+              <strong>Giá:</strong> <span id="modalPrice"></span>
+            </p>
+            <p>
+              <i class="bx bx-tachometer icon--speed"></i>
+              <strong>Tốc độ tối đa:</strong> <span id="modalSpeed"></span>
+            </p>
+            <p>
+              <i class="bx bx-timer icon--acceleration"></i>
+              <strong>Tăng tốc:</strong> <span id="modalAcceleration"></span>
+            </p>
+            <p>
+              <i class="bx bx-car icon--engine"></i> <strong>Động cơ:</strong>
+              <span id="modalEngine"></span>
+            </p>
+            <p>
+              <i class="bx bx-bolt-circle icon--horsepower"></i>
+              <strong>Mã lực:</strong> <span id="modalHorsepower"></span>
+            </p>
+            <p>
+              <i class="bx bx-calendar icon--year"></i>
+              <strong>Năm sản xuất:</strong> <span id="modalYear"></span>
+            </p>
+            <p>
+              <i class="bx bx-cog icon--tech"></i> <strong>Công nghệ:</strong>
+              <span id="modalTech"></span>
+            </p>
+
+            <button class="modal__buy">Mua ngay</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/home.js"></script>
+    <script src="js/deals.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/faq.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/scroll.js"></script>
+  </body>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  </script>
+</html>

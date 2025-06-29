@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/login.css" />
+    <link rel="stylesheet" href="css/article_details.css" />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header" id="header">
+      <div class="header__nav container">
+        <!-- Logo -->
+        <a href="#" class="header__logo">Rento<span>.</span></a>
+
+        <!-- Navbar -->
+        <nav class="header__navbar" id="navbar">
+          <a href="index.html" class="header__nav-link">Trang chủ</a>
+          <a href="#cars" class="header__nav-link">Danh mục</a>
+          <a href="#deals" class="header__nav-link">Ô tô</a>
+          <a href="#parts" class="header__nav-link">Phụ tùng</a>
+          <a href="#vehicles" class="header__nav-link">Nổi bật</a>
+          <a href="#services" class="header__nav-link">Dịch vụ</a>
+          <a href="#blog" class="header__nav-link">Tin tức</a>
+        </nav>
+
+        <!-- Nav Icons -->
+        <div class="header__icons">
+          <a href="#" class="header__icon"><i class="bx bx-search"></i></a>
+          <a href="#" class="header__icon"
+            ><i class="bx bx-user header__user-icon" id="user-icon"></i
+          ></a>
+
+          <!-- Menu Icon -->
+          <div class="header__menu-icon" id="menu-icon">
+            <div class="header__menu-line header__menu-line--1"></div>
+            <div class="header__menu-line header__menu-line--2"></div>
+            <div class="header__menu-line header__menu-line--3"></div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="home" id="home">
+      <div class="home__content container">
+        <div class="home__img-wrapper">
+          <img src="images/home1.png" class="home__img active" alt="Ảnh xe" />
+          <div class="home__car-label">Ferrari sf90</div>
+        </div>
+        <div class="home__info">
+          <div class="home__car-header info__col--large">
+            <h2 class="home__car-name">Ferrari sf90</h2>
+            <p class="home__info-description">
+              Ferrari là siêu xe đậm chất thể thao với thiết kế góc cạnh và động
+              cơ mạnh mẽ.
+            </p>
+          </div>
+          <div class="home__flex__description">
+            <div class="home__specs info__col--small">
+              <div class="info-top">
+                <ion-icon
+                  name="speedometer-outline"
+                  class="icon-box"
+                ></ion-icon>
+                <h3 class="home__info-h3">3.7</h3>
+              </div>
+              <div class="home__info-p">
+                <span>Sec.</span>
+                <span>0-100 km/h</span>
+              </div>
+            </div>
+            <div class="home__specs info__col--small home__specs-list">
+              <div class="home__info-box-small">
+                <div class="info-top">
+                  <ion-icon
+                    name="trending-up-outline"
+                    class="icon-box"
+                  ></ion-icon>
+                  <h3>325</h3>
+                </div>
+                <span>km/h</span>
+                <span>Top Speed</span>
+              </div>
+              <div class="home__info-box-small">
+                <div class="info-top">
+                  <ion-icon
+                    name="car-sport-outline"
+                    class="icon-box icon-box--small"
+                  ></ion-icon>
+                  <h3>8.000</h3>
+                </div>
+                <span>r.p.m</span>
+                <span>Power</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="home__numbers">
+        <span class="home__number active" onclick="selectSlide(0)">1</span>
+        <span class="home__dash">|</span>
+        <span class="home__number" onclick="selectSlide(1)">2</span>
+        <span class="home__dash">|</span>
+        <span class="home__number" onclick="selectSlide(2)">3</span>
+      </div>
+    </section>
+
+    <!-- Blog detail -->
+
+    <main class="blog-detail">
+      <div class="container">
+        <article class="blog-content">
+          <h2>Hướng dẫn chọn siêu xe phù hợp với bạn</h2>
+          <p class="meta">Đăng bởi <strong>Admin</strong> | Ngày 28/06/2025</p>
+
+          <img src="images/blog1.webp" alt="Siêu xe" class="main-img" />
+
+          <p>
+            Việc chọn một chiếc siêu xe không chỉ là chọn một phương tiện di
+            chuyển, mà còn là tuyên ngôn phong cách, đẳng cấp và cá tính của chủ
+            nhân. Bài viết này sẽ giúp bạn phân tích rõ hơn những yếu tố quan
+            trọng khi quyết định mua siêu xe.
+          </p>
+
+          <h3>1. Phong cách lái xe của bạn là gì?</h3>
+          <p>
+            Nếu bạn yêu tốc độ, hãy chọn các mẫu như
+            <strong>Ferrari 488 GTB</strong> hoặc <strong>McLaren 720S</strong>.
+            Nếu yêu sự êm ái, hãy cân nhắc
+            <strong>Bentley Continental GT</strong>.
+          </p>
+          <img src="images/blog-detail1.jpg" alt="Ferrari" />
+
+          <h3>2. Ngân sách của bạn bao nhiêu?</h3>
+          <p>
+            Các dòng siêu xe có giá từ 150.000 USD trở lên. Tuy nhiên, bạn vẫn
+            có thể chọn xe sang tầm trung như
+            <strong>Porsche 911</strong> hoặc <strong>Audi R8</strong> với mức
+            giá hợp lý hơn.
+          </p>
+          <img src="images/blog-detail2.jpg" alt="Porsche" />
+
+          <h3>3. Bạn cần xe để đi hàng ngày hay dịp đặc biệt?</h3>
+          <p>
+            Một số mẫu xe như <strong>Lamborghini Urus</strong> phù hợp cho việc
+            lái hàng ngày nhờ nội thất tiện nghi. Còn nếu bạn chỉ muốn đi phô
+            trương dịp đặc biệt thì <strong>Ferrari SF90</strong> là lựa chọn
+            nổi bật.
+          </p>
+          <img src="images/blog-detail3.jpg" alt="Lamborghini" />
+
+          <blockquote>
+            "Một chiếc xe không chỉ là một cỗ máy – nó là biểu tượng của đam mê,
+            sự sáng tạo và cá tính."
+          </blockquote>
+        </article>
+
+        <aside class="related-posts">
+          <h3>Bài viết liên quan</h3>
+          <div class="related-grid">
+            <article>
+              <img src="images/blog2.jpg" alt="Lambo vs Ferrari" />
+              <h4>
+                <a href="#">Ferrari vs Lamborghini: Cuộc chiến siêu xe</a>
+              </h4>
+              <p>
+                So sánh hiệu năng, thiết kế, trải nghiệm giữa hai ông lớn siêu
+                xe Ý.
+              </p>
+            </article>
+
+            <article>
+              <img src="images/blog3.jpg" alt="Top siêu xe 2025" />
+              <h4><a href="#">Top 5 siêu xe đáng mua nhất năm 2025</a></h4>
+              <p>
+                Danh sách những siêu phẩm đỉnh cao với giá trị và hiệu năng vượt
+                trội.
+              </p>
+            </article>
+
+            <article>
+              <img src="images/blog4.jpg" alt="Xe thể thao hybrid" />
+              <h4><a href="#">Tương lai xe thể thao hybrid & điện</a></h4>
+              <p>
+                Xu hướng xanh hóa siêu xe – sự kết hợp giữa hiệu năng và môi
+                trường.
+              </p>
+            </article>
+          </div>
+        </aside>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer__container">
+        <!-- Cột 1: Logo & mô tả -->
+        <div class="footer__column footer__column--about">
+          <h2 class="footer__logo">Rento <span>.</span></h2>
+          <p class="footer__description">
+            Khám phá thế giới siêu xe – thể thao, sang trọng và đẳng cấp. Trải
+            nghiệm mua xe đỉnh cao chỉ có tại Rento.
+          </p>
+        </div>
+
+        <!-- Cột 2: Danh mục -->
+        <div class="footer__column footer__column--menu">
+          <h4 class="footer__heading">Danh mục</h4>
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a href="#" class="footer__link">Trang chủ</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__link">Giới thiệu</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__link">Siêu xe</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__link">Xe thể thao</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__link">Tin tức</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Cột 3: Liên hệ & Bản đồ -->
+        <div class="footer__column footer__column--contact">
+          <h4 class="footer__heading">Liên hệ</h4>
+          <ul class="footer__contact-list">
+            <li><i class="bx bx-phone"></i> 0989 123 456</li>
+            <li><i class="bx bx-envelope"></i> contact@rento.vn</li>
+            <li><i class="bx bx-map"></i> 68 Trần Duy Hưng, Hà Nội</li>
+          </ul>
+          <div class="footer__social">
+            <a href="#"><i class="bx bxl-facebook"></i></a>
+            <a href="#"><i class="bx bxl-instagram-alt"></i></a>
+            <a href="#"><i class="bx bxl-youtube"></i></a>
+          </div>
+          <div class="footer__map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1012.5561194350579!2d105.65671306985321!3d21.163367606492148!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1svi!2s!4v1751037279160!5m2!1svi!2s"
+              width="100%"
+              height="200"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p>&copy; 2025 Rento. Tất cả bản quyền được bảo lưu.</p>
+      </div>
+    </footer>
+
+    <!-- Auth modal -->
+
+    <div class="auth-modal" id="authModal">
+      <div class="auth-wrapper" id="authWrapper">
+        <span class="auth-close" id="authClose">&times;</span>
+
+        <div class="auth-left">
+          <h1>Rento<span>.</span></h1>
+          <p>
+            Khám phá thế giới siêu xe đẳng cấp. Tốc độ & phong cách đều tập
+            trung tại đây.
+          </p>
+          <img src="images/home3.png" alt="supercar" />
+        </div>
+
+        <div class="auth-right">
+          <div class="form-container login-form active">
+            <h2>Đăng Nhập</h2>
+            <form>
+              <div class="input-box">
+                <input type="text" required placeholder=" " />
+                <label>Tên đăng nhập</label>
+              </div>
+              <div class="input-box">
+                <input type="password" required placeholder=" " />
+                <label>Mật khẩu</label>
+              </div>
+              <button type="submit" class="btn__login">Đăng nhập</button>
+              <div class="social-login">
+                <span>Hoặc đăng nhập bằng:</span>
+                <div class="social-icons">
+                  <i class="bx bxl-google"></i>
+                  <i class="bx bxl-facebook-circle"></i>
+                  <i class="bx bxl-twitter"></i>
+                  <i class="bx bxl-github"></i>
+                </div>
+              </div>
+              <p class="toggle-form">
+                Chưa có tài khoản? <span id="toRegister">Đăng ký</span>
+              </p>
+            </form>
+          </div>
+
+          <div class="form-container register-form">
+            <h2>Đăng Ký</h2>
+            <form>
+              <div class="input-box">
+                <input type="text" required placeholder=" " />
+                <label>Họ và tên</label>
+              </div>
+              <div class="input-box">
+                <input type="email" required placeholder=" " />
+                <label>Email</label>
+              </div>
+              <div class="input-box">
+                <input type="text" required placeholder=" " />
+                <label>Tên đăng nhập</label>
+              </div>
+              <div class="input-box">
+                <input type="password" required placeholder=" " />
+                <label>Mật khẩu</label>
+              </div>
+              <button type="submit" class="btn__login">Đăng ký</button>
+              <p class="toggle-form">
+                Đã có tài khoản? <span id="toLogin">Đăng nhập</span>
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/home.js"></script>
+    <script src="js/login.js"></script>
+  </body>
+</html>
