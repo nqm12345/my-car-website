@@ -25,3 +25,6 @@ a {
 li {
   list-style: none;
 }
+ /* Gợi ý smooth scroll & tối ưu performance */
+  html { scroll-behavior: smooth; }
+  [data-aos] { will-change: transform, opacity; }

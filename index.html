@@ -29,6 +29,11 @@
     <link rel="stylesheet" href="css/modal.css" />
     <link rel="stylesheet" href="css/login.css" />
     <title>Document</title>
+    <!-- AOS CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <!-- Header -->
@@ -180,24 +185,41 @@
       </div>
     </div>
 
-    <!-- Home -->
-
+    <!-- ===== HOME SECTION ===== -->
     <section class="home" id="home">
       <div class="home__content container">
-        <div class="home__img-wrapper">
-          <img src="images/home1.png" class="home__img active" alt="Ảnh xe" />
+        <!-- Ảnh xe -->
+        <div
+          class="home__img-wrapper"
+          data-aos="fade-right"
+          data-aos-delay="100"
+        >
+          <img
+            src="images/home1.png"
+            class="home__img active"
+            alt="Ảnh xe"
+            style="filter: drop-shadow(0 0 10px #c50b19)"
+          />
           <div class="home__car-label">Ferrari sf90</div>
         </div>
-        <div class="home__info">
+
+        <!-- Khối thông tin -->
+        <div class="home__info" data-aos="fade-left" data-aos-delay="200">
           <div class="home__car-header info__col--large">
-            <h2 class="home__car-name">Ferrari sf90</h2>
+            <h2 class="home__car-name" style="color: #c50b19">Ferrari sf90</h2>
             <p class="home__info-description">
               Ferrari là siêu xe đậm chất thể thao với thiết kế góc cạnh và động
               cơ mạnh mẽ.
             </p>
           </div>
+
+          <!-- Grid thông số -->
           <div class="home__flex__description">
-            <div class="home__specs info__col--small">
+            <div
+              class="home__specs info__col--small"
+              data-aos="zoom-in"
+              data-aos-delay="300"
+            >
               <div class="info-top">
                 <ion-icon
                   name="speedometer-outline"
@@ -207,10 +229,16 @@
               </div>
               <div class="home__info-p">
                 <span>Sec.</span>
-                <span>0-100 km/h</span>
+                <span>0‑100 km/h</span>
               </div>
             </div>
-            <div class="home__specs info__col--small home__specs-list">
+
+            <div
+              class="home__specs info__col--small home__specs-list"
+              data-aos="zoom-in"
+              data-aos-delay="400"
+            >
+              <!-- Box #1 Top Speed -->
               <div class="home__info-box-small">
                 <div class="info-top">
                   <ion-icon
@@ -220,8 +248,9 @@
                   <h3>325</h3>
                 </div>
                 <span>km/h</span>
-                <span>Top Speed</span>
+                <span>Top Speed</span>
               </div>
+              <!-- Box #2 Power -->
               <div class="home__info-box-small">
                 <div class="info-top">
                   <ion-icon
@@ -237,7 +266,9 @@
           </div>
         </div>
       </div>
-      <div class="home__numbers">
+
+      <!-- Các nút số chuyển slide -->
+      <div class="home__numbers" data-aos="fade-up" data-aos-delay="500">
         <span class="home__number active" onclick="selectSlide(0)">1</span>
         <span class="home__dash">|</span>
         <span class="home__number" onclick="selectSlide(1)">2</span>
@@ -246,13 +277,28 @@
       </div>
     </section>
 
+    <!-- ===== SCRIPTS ===== -->
+    <!-- Ionicons -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
     <!-- Cars section -->
 
-    <section class="cars" id="cars" data-aos-duration="3000">
+    <section class="cars" id="cars" data-aos="fade-up" data-aos-duration="800">
       <div class="cars__heading">
-        <span>Tất cả các xe ô tô</span>
-        <h2>Chúng tôi có tất cả các loại ô tô</h2>
-        <p>
+        <span data-aos="fade-right" data-aos-delay="100"
+          >Tất cả các xe ô tô</span
+        >
+        <h2 data-aos="fade-left" data-aos-delay="200">
+          Chúng tôi có tất cả các loại ô tô
+        </h2>
+        <p data-aos="zoom-in" data-aos-delay="300">
           Dù bạn yêu thích tốc độ của siêu xe hay cần một chiếc xe gia đình rộng
           rãi, chúng tôi đều có những lựa chọn phù hợp dành cho bạn.
         </p>
@@ -261,33 +307,33 @@
 
     <!-- Cars container -->
 
-    <section class="cars container" data-aos="fade-up" data-aos-duration="3000">
-      <div class="cars__item">
+    <section class="cars container" data-aos="fade-up" data-aos-duration="800">
+      <div class="cars__item" data-aos="zoom-in" data-aos-delay="50">
         <img src="images/car1.jpg" alt="Porche Car" class="cars__image" />
         <h2 class="cars__title">Porche Car</h2>
       </div>
 
-      <div class="cars__item">
+      <div class="cars__item" data-aos="zoom-in" data-aos-delay="100">
         <img src="images/car2.jpg" alt="Bugatti Car" class="cars__image" />
         <h2 class="cars__title">Bugatti Car</h2>
       </div>
 
-      <div class="cars__item">
+      <div class="cars__item" data-aos="zoom-in" data-aos-delay="150">
         <img src="images/car3.jpg" alt="Lamborghini Car" class="cars__image" />
         <h2 class="cars__title">Lamborghini Car</h2>
       </div>
 
-      <div class="cars__item">
+      <div class="cars__item" data-aos="zoom-in" data-aos-delay="200">
         <img src="images/car4.jpg" alt="BMW Car" class="cars__image" />
         <h2 class="cars__title">BMW Car</h2>
       </div>
 
-      <div class="cars__item">
+      <div class="cars__item" data-aos="zoom-in" data-aos-delay="250">
         <img src="images/car5.jpg" alt="Mercedes Car" class="cars__image" />
         <h2 class="cars__title">Mercedes Car</h2>
       </div>
 
-      <div class="cars__item">
+      <div class="cars__item" data-aos="zoom-in" data-aos-delay="300">
         <img src="images/car6.jpg" alt="Ferrari Car" class="cars__image" />
         <h2 class="cars__title">Ferrari Car</h2>
       </div>
@@ -299,18 +345,21 @@
       class="deals"
       id="deals"
       data-aos="fade-up"
-      data-aos-duration="3000"
+      data-aos-duration="1000"
+      data-aos-offset="200"
+      data-aos-easing="ease-in-out"
     >
       <div class="section__container deals__container">
         <h2 class="section__header">Khám Phá Thế Giới Siêu Xe Đỉnh Cao</h2>
-        <p class="section__description">
+        <p class="section__description" data-aos="fade-up"
+      data-aos-delay="300">
           Ferrari, Bugatti, Porsche, BMW và Mercedes – những biểu tượng tốc độ,
           đẳng cấp và công nghệ hiện đại. Chúng tôi mang đến cho bạn những mẫu
           xe sang trọng bậc nhất, thiết kế tinh tế cùng hiệu suất vượt trội, sẵn
           sàng chinh phục mọi cung đường.
         </p>
 
-        <div class="deals__tabs">
+        <div class="deals__tabs" data-aos="fade-up" data-aos-delay="400">
           <button class="btn active" data-id="Ferrari">Ferrari</button>
           <button class="btn" data-id="Bugatti">Bugatti</button>
           <button class="btn" data-id="Porsche">Porsche</button>
@@ -320,7 +369,7 @@
 
         <!-- FERRARI -->
         <div id="Ferrari" class="tab__content active">
-          <div class="deals__card">
+          <div class="deals__card" data-aos="zoom-in" data-aos-delay="100">
             <img src="images/home1.png" alt="" />
             <div class="deals__rating">
               <span><i class="bx bxs-star"></i></span>
@@ -462,7 +511,7 @@
 
         <!-- BUGATTI -->
         <div id="Bugatti" class="tab__content">
-          <div class="deals__card">
+          <div class="deals__card" data-aos="zoom-in" data-aos-delay="200">
             <img src="images/home2.png" alt="" />
             <div class="deals__rating">
               <span><i class="bx bxs-star"></i></span>
@@ -489,7 +538,7 @@
 
         <!-- PORSCHE -->
         <div id="Porsche" class="tab__content">
-          <div class="deals__card">
+          <div class="deals__card" data-aos="zoom-in" data-aos-delay="300">
             <img src="images/home3.png" alt="" />
             <div class="deals__rating">
               <span><i class="bx bxs-star"></i></span>
@@ -516,7 +565,7 @@
 
         <!-- BMW -->
         <div id="BMW" class="tab__content">
-          <div class="deals__card">
+          <div class="deals__card" data-aos="zoom-in" data-aos-delay="400">
             <img src="images/bmw1.png" alt="" />
             <div class="deals__rating">
               <span><i class="bx bxs-star"></i></span>
@@ -543,7 +592,7 @@
 
         <!-- MERCEDES -->
         <div id="Mercedes" class="tab__content">
-          <div class="deals__card">
+          <div class="deals__card" data-aos="zoom-in" data-aos-delay="500">
             <img src="images/mcd1.png" alt="" />
             <div class="deals__rating">
               <span><i class="bx bxs-star"></i></span>
@@ -570,164 +619,122 @@
       </div>
     </section>
 
-    <section
-      class="parts"
-      id="parts"
-      data-aos="fade-up"
-      data-aos-duration="3000"
-    >
-      <div class="parts__heading">
-        <span class="parts__heading-subtitle">Phụ tùng siêu xe</span>
-        <h2 class="parts__heading-title">
-          Chúng tôi cung cấp mọi loại phụ tùng cho siêu xe
-        </h2>
-        <p class="parts__heading-description">
-          Từ động cơ hiệu suất cao, hệ thống treo thể thao đến phụ kiện nội thất
-          sang trọng – chúng tôi mang đến giải pháp tối ưu cho mọi dòng siêu xe
-          như Ferrari, Lamborghini, Porsche và nhiều thương hiệu đẳng cấp khác.
-        </p>
+<section
+  class="parts"
+  id="parts"
+  data-aos="fade-up"
+  data-aos-duration="3000"
+>
+  <div class="parts__heading">
+    <span class="parts__heading-subtitle" data-aos="fade-down" data-aos-delay="0">Phụ tùng siêu xe</span>
+    <h2 class="parts__heading-title" data-aos="zoom-in" data-aos-delay="100">
+      Chúng tôi cung cấp mọi loại phụ tùng cho siêu xe
+    </h2>
+    <p class="parts__heading-description" data-aos="fade-up" data-aos-delay="200">
+      Từ động cơ hiệu suất cao, hệ thống treo thể thao đến phụ kiện nội thất
+      sang trọng – chúng tôi mang đến giải pháp tối ưu cho mọi dòng siêu xe
+      như Ferrari, Lamborghini, Porsche và nhiều thương hiệu đẳng cấp khác.
+    </p>
+  </div>
+
+  <div class="parts__list">
+    <!-- Item 1 -->
+    <div class="parts__item" data-aos="fade-up" data-aos-delay="0">
+      <img src="images/part1.png" alt="Động cơ V12" class="parts__item-image" />
+      <div class="parts__item-rating">
+        <span><i class="bx bxs-star"></i></span><span><i class="bx bxs-star"></i></span>
+        <span><i class="bx bxs-star"></i></span><span><i class="bx bxs-star"></i></span>
+        <span><i class="bx bxs-star-half"></i></span><span>(4.7k)</span>
       </div>
-
-      <div class="parts__list">
-        <!-- Item 1 -->
-        <div class="parts__item">
-          <img
-            src="images/part1.png"
-            alt="Động cơ V12"
-            class="parts__item-image"
-          />
-          <div class="parts__item-rating">
-            <span><i class="bx bxs-star"></i></span>
-            <span><i class="bx bxs-star"></i></span>
-            <span><i class="bx bxs-star"></i></span>
-            <span><i class="bx bxs-star"></i></span>
-            <span><i class="bx bxs-star-half"></i></span>
-            <span>(4.7k)</span>
-          </div>
-          <h4 class="parts__item-title">Động cơ V12 hiệu suất cao</h4>
-          <hr class="parts__item-divider" />
-          <div class="parts__item-footer">
-            <h3 class="parts__item-price">$ 125.000</h3>
-            <a href="#" class="parts__item-button">Mua ngay</a>
-          </div>
-        </div>
-
-        <!-- Item 2 -->
-        <div class="parts__item">
-          <img
-            src="images/part2.png"
-            alt="Phanh carbon-ceramic"
-            class="parts__item-image"
-          />
-          <div class="parts__item-rating">
-            <span><i class="bx bxs-star"></i></span>
-            <span><i class="bx bxs-star"></i></span>
-            <span><i class="bx bxs-star"></i></span>
-            <span><i class="bx bxs-star"></i></span>
-            <span><i class="bx bxs-star"></i></span>
-            <span>(2.9k)</span>
-          </div>
-          <h4 class="parts__item-title">Hệ thống phanh carbon-ceramic</h4>
-          <hr class="parts__item-divider" />
-          <div class="parts__item-footer">
-            <h3 class="parts__item-price">$ 18.000</h3>
-            <a href="#" class="parts__item-button">Mua ngay</a>
-          </div>
-        </div>
-
-        <!-- Item 3 -->
-        <div class="parts__item">
-          <img
-            src="images/part3.png"
-            alt="Ống xả titan"
-            class="parts__item-image"
-          />
-          <div class="parts__item-rating">
-            <span><i class="bx bxs-star"></i></span>
-            <span><i class="bx bxs-star"></i></span>
-            <span><i class="bx bxs-star"></i></span>
-            <span><i class="bx bxs-star-half"></i></span>
-            <span><i class="bx bx-star"></i></span>
-            <span>(1.2k)</span>
-          </div>
-          <h4 class="parts__item-title">Ống xả Titan siêu nhẹ</h4>
-          <hr class="parts__item-divider" />
-          <div class="parts__item-footer">
-            <h3 class="parts__item-price">$ 9.500</h3>
-            <a href="#" class="parts__item-button">Mua ngay</a>
-          </div>
-        </div>
-
-        <!-- Item 4 -->
-        <div class="parts__item">
-          <img
-            src="images/part4.png"
-            alt="Lốp xe hiệu suất cao"
-            class="parts__item-image"
-          />
-          <div class="parts__item-rating">
-            <span><i class="bx bxs-star"></i></span>
-            <span><i class="bx bxs-star"></i></span>
-            <span><i class="bx bxs-star"></i></span>
-            <span><i class="bx bxs-star"></i></span>
-            <span><i class="bx bxs-star-half"></i></span>
-            <span>(3.1k)</span>
-          </div>
-          <h4 class="parts__item-title">Lốp xe hiệu suất cao Pirelli</h4>
-          <hr class="parts__item-divider" />
-          <div class="parts__item-footer">
-            <h3 class="parts__item-price">$ 4.800</h3>
-            <a href="#" class="parts__item-button">Mua ngay</a>
-          </div>
-        </div>
-
-        <!-- Item 5 -->
-        <div class="parts__item">
-          <img
-            src="images/part5.png"
-            alt="Vô lăng thể thao"
-            class="parts__item-image"
-          />
-          <div class="parts__item-rating">
-            <span><i class="bx bxs-star"></i></span>
-            <span><i class="bx bxs-star"></i></span>
-            <span><i class="bx bxs-star"></i></span>
-            <span><i class="bx bx-star"></i></span>
-            <span><i class="bx bx-star"></i></span>
-            <span>(1.9k)</span>
-          </div>
-          <h4 class="parts__item-title">Vô lăng thể thao bọc carbon</h4>
-          <hr class="parts__item-divider" />
-          <div class="parts__item-footer">
-            <h3 class="parts__item-price">$ 2.300</h3>
-            <a href="#" class="parts__item-button">Mua ngay</a>
-          </div>
-        </div>
-
-        <!-- Item 6 -->
-        <div class="parts__item">
-          <img
-            src="images/part6.png"
-            alt="Đèn LED matrix"
-            class="parts__item-image"
-          />
-          <div class="parts__item-rating">
-            <span><i class="bx bxs-star"></i></span>
-            <span><i class="bx bxs-star"></i></span>
-            <span><i class="bx bxs-star-half"></i></span>
-            <span><i class="bx bx-star"></i></span>
-            <span><i class="bx bx-star"></i></span>
-            <span>(800)</span>
-          </div>
-          <h4 class="parts__item-title">Đèn LED Matrix siêu sáng</h4>
-          <hr class="parts__item-divider" />
-          <div class="parts__item-footer">
-            <h3 class="parts__item-price">$ 1.200</h3>
-            <a href="#" class="parts__item-button">Mua ngay</a>
-          </div>
-        </div>
+      <h4 class="parts__item-title">Động cơ V12 hiệu suất cao</h4>
+      <hr class="parts__item-divider" />
+      <div class="parts__item-footer">
+        <h3 class="parts__item-price">$ 125.000</h3>
+        <a href="#" class="parts__item-button">Mua ngay</a>
       </div>
-    </section>
+    </div>
+
+    <!-- Item 2 -->
+    <div class="parts__item" data-aos="fade-up" data-aos-delay="100">
+      <img src="images/part2.png" alt="Phanh carbon-ceramic" class="parts__item-image" />
+      <div class="parts__item-rating">
+        <span><i class="bx bxs-star"></i></span><span><i class="bx bxs-star"></i></span>
+        <span><i class="bx bxs-star"></i></span><span><i class="bx bxs-star"></i></span>
+        <span><i class="bx bxs-star"></i></span><span>(2.9k)</span>
+      </div>
+      <h4 class="parts__item-title">Hệ thống phanh carbon-ceramic</h4>
+      <hr class="parts__item-divider" />
+      <div class="parts__item-footer">
+        <h3 class="parts__item-price">$ 18.000</h3>
+        <a href="#" class="parts__item-button">Mua ngay</a>
+      </div>
+    </div>
+
+    <!-- Item 3 -->
+    <div class="parts__item" data-aos="fade-up" data-aos-delay="200">
+      <img src="images/part3.png" alt="Ống xả titan" class="parts__item-image" />
+      <div class="parts__item-rating">
+        <span><i class="bx bxs-star"></i></span><span><i class="bx bxs-star"></i></span>
+        <span><i class="bx bxs-star"></i></span><span><i class="bx bxs-star-half"></i></span>
+        <span><i class="bx bx-star"></i></span><span>(1.2k)</span>
+      </div>
+      <h4 class="parts__item-title">Ống xả Titan siêu nhẹ</h4>
+      <hr class="parts__item-divider" />
+      <div class="parts__item-footer">
+        <h3 class="parts__item-price">$ 9.500</h3>
+        <a href="#" class="parts__item-button">Mua ngay</a>
+      </div>
+    </div>
+
+    <!-- Item 4 -->
+    <div class="parts__item" data-aos="fade-up" data-aos-delay="300">
+      <img src="images/part4.png" alt="Lốp xe hiệu suất cao" class="parts__item-image" />
+      <div class="parts__item-rating">
+        <span><i class="bx bxs-star"></i></span><span><i class="bx bxs-star"></i></span>
+        <span><i class="bx bxs-star"></i></span><span><i class="bx bxs-star"></i></span>
+        <span><i class="bx bxs-star-half"></i></span><span>(3.1k)</span>
+      </div>
+      <h4 class="parts__item-title">Lốp xe hiệu suất cao Pirelli</h4>
+      <hr class="parts__item-divider" />
+      <div class="parts__item-footer">
+        <h3 class="parts__item-price">$ 4.800</h3>
+        <a href="#" class="parts__item-button">Mua ngay</a>
+      </div>
+    </div>
+
+    <!-- Item 5 -->
+    <div class="parts__item" data-aos="fade-up" data-aos-delay="400">
+      <img src="images/part5.png" alt="Vô lăng thể thao" class="parts__item-image" />
+      <div class="parts__item-rating">
+        <span><i class="bx bxs-star"></i></span><span><i class="bx bxs-star"></i></span>
+        <span><i class="bx bxs-star"></i></span><span><i class="bx bx-star"></i></span>
+        <span><i class="bx bx-star"></i></span><span>(1.9k)</span>
+      </div>
+      <h4 class="parts__item-title">Vô lăng thể thao bọc carbon</h4>
+      <hr class="parts__item-divider" />
+      <div class="parts__item-footer">
+        <h3 class="parts__item-price">$ 2.300</h3>
+        <a href="#" class="parts__item-button">Mua ngay</a>
+      </div>
+    </div>
+
+    <!-- Item 6 -->
+    <div class="parts__item" data-aos="fade-up" data-aos-delay="500">
+      <img src="images/part6.png" alt="Đèn LED matrix" class="parts__item-image" />
+      <div class="parts__item-rating">
+        <span><i class="bx bxs-star"></i></span><span><i class="bx bxs-star"></i></span>
+        <span><i class="bx bxs-star-half"></i></span><span><i class="bx bx-star"></i></span>
+        <span><i class="bx bx-star"></i></span><span>(800)</span>
+      </div>
+      <h4 class="parts__item-title">Đèn LED Matrix siêu sáng</h4>
+      <hr class="parts__item-divider" />
+      <div class="parts__item-footer">
+        <h3 class="parts__item-price">$ 1.200</h3>
+        <a href="#" class="parts__item-button">Mua ngay</a>
+      </div>
+    </div>
+  </div>
+</section>
 
     <!-- Vehicles -->
 
@@ -1287,10 +1294,14 @@
     <script src="js/scroll.js"></script>
   </body>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- AOS JS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>
     AOS.init({
-      duration: 1000,
-      once: true,
+      duration: 1000, // thời gian animation
+      once: false, // chạy lại khi cuộn lên
+      mirror: true, // chạy lại khi cuộn xuống
+      easing: "ease-in-out",
     });
   </script>
 </html>
